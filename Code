@@ -1,0 +1,30 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    String str = "RaviTeja,Maramreddy 1"; 
+	    String firstName = " ";
+	    String middleName = " ";
+	    String suffix = " ";
+        String[] arrOfStr = str.split(",");
+       String lastName = arrOfStr[0];
+        String remaining = arrOfStr[1];
+        String[] arrOfStr1 = remaining.split(" ");
+        int lengthOfRemaining = remaining.length();
+        if(arrOfStr1.length == 3){
+              firstName = arrOfStr1[0];
+              middleName= arrOfStr1[1];
+              suffix = arrOfStr1[2];
+        }
+        else if(arrOfStr1.length == 2)
+        {
+            firstName = arrOfStr1[0];
+              suffix = arrOfStr1[1];
+        }
+        else if(arrOfStr1.length == 1)
+        {
+            firstName = arrOfStr1[0];
+             
+        }
+	System.out.println("FirstName : " + firstName + " LastName : " + lastName + " MiddleName : " + middleName + " Suffix : " + suffix);
+	}
+}
